@@ -1,8 +1,8 @@
-
-        
-def searchLetter(contador):
-    phrase = input("ingrese una frase: ")
-    word = phrase.split(" ")    
+phrase = input("ingrese una frase: ")  
+word = phrase.split(" ")  
+    
+def allLetter(contador):
+     
     contador = 0
 
     for i in word:     
@@ -11,17 +11,29 @@ def searchLetter(contador):
             
     return print(f"total de letras encontradas", contador)
     
-def charCount():
-    phrase = input("ingrese una frase: ")
-    word = phrase.split(" ")    
-    
+def charCount():  
     
     return print(f"total de palabras encontradas es {len(word)}")
+ 
+def searchLetter():
+    
+    letras = ["a", "e", "i", "o", "u"]
+    contador = 0
+    
+    for i in word:
+        for l in i:
+            for n in letras:
+                if l == n:
+                    contador += 1
+                    
+                resul = print(f"el numero de letras {l} es {contador}")
+                
+     
+    return resul
     
     
-#searchLetter(0)
-
-charCount()
+#allLetter(0)
+searchLetter()
 
     
 
