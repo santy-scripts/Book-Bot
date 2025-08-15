@@ -1,7 +1,5 @@
 def bubble_sort(nums):
 
-    nums = [5, 7, 3, 6, 8]
-
     n = len(nums)
 
     for i in range(n):
