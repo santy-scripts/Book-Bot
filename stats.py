@@ -19,4 +19,15 @@ def bubble_sort(text):
                 char[j] = char[j+1]
                 char[j+1] = temp
                 
+                
+def get_num_letters(text):
+    
+    total_letras = 0
+
+    for palabra in text:
+        if palabra != "":
+            total_letras += len(palabra)
+            
+    return print(f"{total_letras}")
+
     

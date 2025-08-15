@@ -1,5 +1,5 @@
 import sys
-from stats import (get_num_words, bubble_sort)
+from stats import (get_num_words, bubble_sort, get_num_letters)
 
 print(r"""  
  ____                    __                   
@@ -24,10 +24,18 @@ with open("book.txt", "r", encoding="utf-8") as f:
   
     text = f.read()
 
-words = bubble_sort(text)
-print(words)
 
+def interface():
+    print("============ BOOKBOT ============")
+    print(f"----------- Word Count ----------")
+    total_words = get_num_words(text)
+    print(f"{total_words}")
+    print(f"--------- Character Count -------")
+    total_letters = get_num_letters(text)
+    print(f"{total_letters}")
 
+    
+interface()
 
 """  
    
