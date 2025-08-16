@@ -1,5 +1,5 @@
 import sys
-from stats import (get_num_words, bubble_sort, get_num_letters)
+from stats import (get_num_words, bubble_sort, get_num_letters, get_abc_words)
 
 print(r"""  
  ____                    __                   
@@ -33,7 +33,12 @@ def interface():
     print(f"--------- Character Count -------")
     total_letters = get_num_letters(text)
     print(f"{total_letters}")
-
+    print(f"--------- Bubble Sort -------")
+    bubbleSort = bubble_sort(text)
+    print(f"{bubbleSort}")
+    print(f"-------- Count per Letter -------")
+    CountLetters = get_abc_words(text)
+    print(f"{CountLetters}")
     
 interface()
 
