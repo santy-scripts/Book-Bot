@@ -29,15 +29,19 @@ def get_abc_words(text):
 def bubble_sort(text):
     
     char = list(text)
-    
+    swapped = True
     n = len(char)
     
-    for i in range(n):
-        for j in range(n-1):
-            if char[j] > char[j+1]:
-                temp = char[j]
-                char[j] = char[j+1]
-                char[j+1] = temp
+    while swapped:
+        swapped = False
+        for i in range(n):
+            for j in range(n-1):
+                if char[j] > char[j+1]:
+                    temp = char[j]
+                    char[j] = char[j+1]
+                    char[j+1] = temp
+                    swapped = True
+        n -= 1
                 
     return char
                 
